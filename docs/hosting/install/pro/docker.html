@@ -209,7 +209,7 @@
 
     <ul>
       <li>docker: <a href="https://docs.docker.com/get-docker/" target="_blank">https://docs.docker.com/get-docker/</a></li>
-      <li>docker-compose: <a href="https://docs.docker.com/compose/install/" target="_blank">https://docs.docker.com/compose/install/</a></li>
+      <li>docker compose: <a href="https://docs.docker.com/compose/install/" target="_blank">https://docs.docker.com/compose/install/</a></li>
       <li><a href="https://docs.docker.com/engine/install/linux-postinstall/" target="_blank">A Linux user able to run docker commands without sudo</a></li>
       <li>a working SMTP server for email notifications</li>
       <li>a working NTP service to avoid GPG authentication issues</li>
@@ -222,9 +222,9 @@
       <li><a href="/faq/hosting/firewall-rules" target="_blank">Firewall rules</a></li>
     </ul>
 
-    <h2 id="docker-compose">docker-compose</h2>
+    <h2 id="docker compose">docker compose</h2>
 
-    <p>The easiest and recommended way to deploy your passbolt stack is to use docker-compose.</p>
+    <p>The easiest and recommended way to deploy your passbolt stack is to use docker compose.</p>
 
     <p><strong>Step 1.</strong> Download our docker-compose.yml example file</p>
 
@@ -320,12 +320,12 @@ the most used environment variables for this purpose:</p>
 
     <p><strong>Step 5.</strong> Start your containers</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f docker-compose-pro.yaml up -d
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose -f docker-compose-pro.yaml up -d
 </code></pre></div>    </div>
 
     <p><strong>Step 6.</strong> Create first admin user</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker-compose <span class="nt">-f</span> docker-compose-pro.yaml <span class="nb">exec </span>passbolt su <span class="nt">-m</span> <span class="nt">-c</span> <span class="s2">"/usr/share/php/passbolt/bin/cake </span><span class="se">\</span><span class="s2">
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker compose <span class="nt">-f</span> docker-compose-pro.yaml <span class="nb">exec </span>passbolt su <span class="nt">-m</span> <span class="nt">-c</span> <span class="s2">"/usr/share/php/passbolt/bin/cake </span><span class="se">\</span><span class="s2">
                                 passbolt register_user </span><span class="se">\</span><span class="s2">
                                 -u &lt;your@email.com&gt; </span><span class="se">\</span><span class="s2">
                                 -f &lt;yourname&gt; </span><span class="se">\</span><span class="s2">
